@@ -5,6 +5,7 @@ import { revalidatePath, revalidateTag } from 'next/cache'
 
 export const Categories: CollectionConfig = {
   slug: 'categories',
+  dbName: 'cat',
   access: {
     create: isAdmin,
     delete: isAdmin,

@@ -5,6 +5,7 @@ import { isAdminOrSelf, isAdminOrSelfFieldLevel } from '../access/isAdminOrSelf'
 
 export const Users: CollectionConfig = {
   slug: 'users',
+  dbName: 'usr',
   access: {
     create: isAdmin,
     delete: isAdminOrSelf,

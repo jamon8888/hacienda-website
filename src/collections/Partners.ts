@@ -8,6 +8,7 @@ import { formatPreviewURL } from '../utilities/formatPreviewURL'
 
 export const Partners: CollectionConfig = {
   slug: 'partners',
+  dbName: 'pt',
   access: {
     create: isAdmin,
     delete: isAdmin,

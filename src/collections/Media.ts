@@ -4,6 +4,7 @@ import { isAdmin } from '../access/isAdmin'
 
 export const Media: CollectionConfig<'media'> = {
   slug: 'media',
+  dbName: 'med',
   access: {
     create: isAdmin,
     delete: isAdmin,
