@@ -6,6 +6,7 @@ import { bannerTypes } from '../shared'
 
 export const BannerBlock: Block = {
   slug: 'Banner',
+  dbName: 'ban',
   fields: [
     {
       name: 'type',

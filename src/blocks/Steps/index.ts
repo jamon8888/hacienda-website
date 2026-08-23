@@ -4,6 +4,7 @@ import { blockFields } from '../../fields/blockFields'
 
 export const Steps: Block = {
   slug: 'steps',
+  dbName: 'ste',
   fields: [
     blockFields({
       name: 'stepsFields',

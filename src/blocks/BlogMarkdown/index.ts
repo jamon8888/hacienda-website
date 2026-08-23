@@ -4,6 +4,7 @@ import { blockFields } from '../../fields/blockFields'
 
 export const BlogMarkdown: Block = {
   slug: 'blogMarkdown',
+  dbName: 'blo',
   fields: [
     blockFields({
       name: 'blogMarkdownFields',

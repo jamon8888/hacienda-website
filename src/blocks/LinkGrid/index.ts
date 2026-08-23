@@ -5,6 +5,7 @@ import linkGroup from '../../fields/linkGroup'
 
 export const LinkGrid: Block = {
   slug: 'linkGrid',
+  dbName: 'lin',
   fields: [
     blockFields({
       name: 'linkGridFields',

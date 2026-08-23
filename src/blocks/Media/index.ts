@@ -4,6 +4,7 @@ import { blockFields } from '../../fields/blockFields'
 
 export const MediaBlock: Block = {
   slug: 'mediaBlock',
+  dbName: 'med',
   fields: [
     blockFields({
       name: 'mediaBlockFields',

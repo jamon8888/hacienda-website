@@ -5,6 +5,7 @@ import { codeConverter } from './converter'
 
 export const CodeBlock: Block = {
   slug: 'Code',
+  dbName: 'cod',
   admin: {
     jsx: '@root/collections/Docs/blocks/code/converterClient#codeConverterClient',
   },

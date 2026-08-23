@@ -4,6 +4,7 @@ import { blockFields } from '../../fields/blockFields'
 
 export const ReusableContent: Block = {
   slug: 'reusableContentBlock',
+  dbName: 'reu',
   fields: [
     blockFields({
       name: 'reusableContentBlockFields',

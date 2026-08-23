@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const VideoDrawerBlock: Block = {
   slug: 'VideoDrawer',
+  dbName: 'vid',
   fields: [
     {
       name: 'id',

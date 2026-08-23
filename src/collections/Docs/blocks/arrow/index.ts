@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const ArrowBlock: Block = {
   slug: 'Arrow',
+  dbName: 'arr',
   fields: [
     {
       name: 'direction',

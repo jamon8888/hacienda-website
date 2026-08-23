@@ -7,6 +7,7 @@ import richText from '../../fields/richText'
 
 export const CardGrid: Block = {
   slug: 'cardGrid',
+  dbName: 'car',
   fields: [
     blockFields({
       name: 'cardGridFields',

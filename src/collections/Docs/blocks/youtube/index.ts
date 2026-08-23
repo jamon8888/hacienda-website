@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const YoutubeBlock: Block = {
   slug: 'YouTube',
+  dbName: 'you',
   fields: [
     {
       name: 'id',

@@ -7,6 +7,7 @@ import richText from '../../fields/richText'
 
 export const StickyHighlights: Block = {
   slug: 'stickyHighlights',
+  dbName: 'sti',
   fields: [
     blockFields({
       name: 'stickyHighlightsFields',

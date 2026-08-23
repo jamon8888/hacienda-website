@@ -7,6 +7,7 @@ import linkGroup from '../fields/linkGroup'
 
 export const PartnerProgram: GlobalConfig = {
   slug: 'partner-program',
+  dbName: 'par',
   access: {
     read: () => true,
     update: isAdmin,

@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const DownloadBlock: Block = {
   slug: 'downloadBlock',
+  dbName: 'dow',
   fields: [
     {
       name: 'downloads',

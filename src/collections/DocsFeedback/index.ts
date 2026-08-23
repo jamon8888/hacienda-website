@@ -5,6 +5,7 @@ import docsFeedbackVote from '../../scripts/docsFeedbackVote'
 
 export const DocsFeedback: CollectionConfig = {
   slug: 'docs-feedback',
+  dbName: 'doc',
   access: {
     create: isAdmin,
     delete: isAdmin,

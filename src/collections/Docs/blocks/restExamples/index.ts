@@ -4,6 +4,7 @@ import { BlocksFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
 
 export const RestExamplesBlock: Block = {
   slug: 'RestExamples',
+  dbName: 'res',
   fields: [
     {
       name: 'data',

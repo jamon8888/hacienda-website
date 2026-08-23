@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const BulletListBlock: Block = {
   slug: 'BulletList',
+  dbName: 'bul',
   fields: [
     {
       name: 'items',

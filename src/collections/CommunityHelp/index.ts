@@ -6,6 +6,7 @@ import { updateAlgolia } from './updateAlgolia'
 
 export const CommunityHelp: CollectionConfig = {
   slug: 'community-help',
+  dbName: 'com',
   access: {
     create: isAdmin,
     delete: isAdmin,

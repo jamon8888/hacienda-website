@@ -5,6 +5,7 @@ import link from '../../fields/link'
 
 export const Pricing: Block = {
   slug: 'pricing',
+  dbName: 'pri',
   fields: [
     blockFields({
       name: 'pricingFields',

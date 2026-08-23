@@ -6,6 +6,7 @@ import richText from '../../fields/richText'
 
 export const Statement: Block = {
   slug: 'statement',
+  dbName: 'sta',
   fields: [
     blockFields({
       name: 'statementFields',

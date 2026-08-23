@@ -7,6 +7,7 @@ import link from '../fields/link'
 
 export const MainMenu: GlobalConfig = {
   slug: 'main-menu',
+  dbName: 'mai',
   access: {
     read: () => true,
     update: isAdmin,

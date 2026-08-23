@@ -4,6 +4,7 @@ import { blockFields } from '../../fields/blockFields'
 
 export const Banner: Block = {
   slug: 'banner',
+  dbName: 'ban',
   fields: [
     blockFields({
       name: 'bannerFields',

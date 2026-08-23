@@ -64,6 +64,7 @@ export const contentLexicalEditorFeatures: FeatureProviderServer[] = [
 
 export const Docs: CollectionConfig = {
   slug: 'docs',
+  dbName: 'doc',
   access: {
     create: isAdmin,
     delete: isAdmin,

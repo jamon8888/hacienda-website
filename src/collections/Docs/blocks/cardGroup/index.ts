@@ -4,6 +4,7 @@ import { BlocksFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
 
 export const CardGroupBlock: Block = {
   slug: 'CardGroup',
+  dbName: 'car',
   fields: [
     {
       name: 'content',

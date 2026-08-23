@@ -7,6 +7,7 @@ import { blockFields } from '../../fields/blockFields'
 
 export const Slider: Block = {
   slug: 'slider',
+  dbName: 'sli',
   fields: [
     blockFields({
       name: 'sliderFields',

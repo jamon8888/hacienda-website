@@ -7,6 +7,7 @@ import richText from '../../fields/richText'
 
 export const CodeFeature: Block = {
   slug: 'codeFeature',
+  dbName: 'cod',
   fields: [
     blockFields({
       name: 'codeFeatureFields',

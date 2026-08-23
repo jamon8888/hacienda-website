@@ -5,6 +5,7 @@ import { revalidatePath } from 'next/cache'
 
 export const TopBar: GlobalConfig = {
   slug: 'topBar',
+  dbName: 'top',
   fields: [
     {
       name: 'enableTopBar',

@@ -7,6 +7,7 @@ import richText from '@root/fields/richText'
 
 export const CallToAction: Block = {
   slug: 'cta',
+  dbName: 'cta',
   fields: [
     blockFields({
       name: 'ctaFields',

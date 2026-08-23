@@ -6,6 +6,7 @@ import richText from '../../fields/richText'
 
 export const HoverCards: Block = {
   slug: 'hoverCards',
+  dbName: 'hov',
   fields: [
     blockFields({
       name: 'hoverCardsFields',

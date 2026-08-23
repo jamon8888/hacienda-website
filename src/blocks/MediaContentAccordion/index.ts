@@ -5,6 +5,7 @@ import link from '../../fields/link'
 
 export const MediaContentAccordion: Block = {
   slug: 'mediaContentAccordion',
+  dbName: 'med',
   fields: [
     blockFields({
       name: 'mediaContentAccordionFields',

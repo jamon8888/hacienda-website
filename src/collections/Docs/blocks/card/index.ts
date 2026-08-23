@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const CardBlock: Block = {
   slug: 'Card',
+  dbName: 'car',
   fields: [
     {
       name: 'title',

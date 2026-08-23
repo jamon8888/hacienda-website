@@ -4,6 +4,7 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 export const UploadBlock: Block = {
   slug: 'Upload',
+  dbName: 'upl',
   fields: [
     {
       name: 'src',

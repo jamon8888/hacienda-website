@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const CodeExampleBlock: Block = {
   slug: 'CodeExampleBlock',
+  dbName: 'cod',
   fields: [
     {
       name: 'code',

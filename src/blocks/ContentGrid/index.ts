@@ -6,6 +6,7 @@ import richText from '../../fields/richText'
 
 export const ContentGrid: Block = {
   slug: 'contentGrid',
+  dbName: 'con',
   fields: [
     blockFields({
       name: 'contentGridFields',

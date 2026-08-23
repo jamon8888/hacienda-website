@@ -4,6 +4,7 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 export const TableWithDrawersBlock: Block = {
   slug: 'TableWithDrawers',
+  dbName: 'tab',
   fields: [
     {
       name: 'columns',

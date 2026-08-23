@@ -4,6 +4,7 @@ import { blockFields } from '@root/fields/blockFields'
 
 export const ComparisonTable: Block = {
   slug: 'comparisonTable',
+  dbName: 'com',
   fields: [
     blockFields({
       name: 'comparisonTableFields',

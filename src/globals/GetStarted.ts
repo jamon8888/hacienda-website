@@ -27,6 +27,7 @@ const richTextBlock: Block = tabBlock('richTextBlock', [
 ])
 export const GetStarted: GlobalConfig = {
   slug: 'get-started',
+  dbName: 'get',
   access: {
     read: () => true,
     update: isAdmin,

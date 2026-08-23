@@ -6,6 +6,7 @@ import richText from '../../fields/richText'
 
 export const MediaContent: Block = {
   slug: 'mediaContent',
+  dbName: 'med',
   fields: [
     blockFields({
       name: 'mediaContentFields',

@@ -7,6 +7,7 @@ import link from '../fields/link'
 
 export const Footer: GlobalConfig = {
   slug: 'footer',
+  dbName: 'foo',
   access: {
     read: () => true,
     update: isAdmin,
