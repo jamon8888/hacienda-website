@@ -42,7 +42,7 @@ const nextConfig = withBundleAnalyzer({
     ignoreDuringBuilds: true,
   },
   reactStrictMode: true,
-  images: {
+    images: {
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year,
     remotePatterns: [
       ...localhost,
@@ -81,10 +81,14 @@ const nextConfig = withBundleAnalyzer({
         hostname: 'img.youtube.com',
         port: '',
       },
-      {
-        protocol: 'https',
-        hostname: process.env.BLOB_STORE_ID,
-      },
+      ...(process.env.BLOB_STORE_ID
+        ? [
+            {
+              protocol: 'https',
+              hostname: process.env.BLOB_STORE_ID,
+            },
+          ]
+        : []),
     ].filter(Boolean),
   },
   sassOptions: {
