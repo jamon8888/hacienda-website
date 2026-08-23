@@ -14,6 +14,7 @@ export const StickyHighlights: Block = {
       fields: [
         {
           name: 'highlights',
+          dbName: 'hig',
           type: 'array',
           fields: [
             richText(),

@@ -5,6 +5,7 @@ import richText from './richText'
 
 const codeBlips: ArrayField = {
   name: 'codeBlips',
+  dbName: 'cob',
   type: 'array',
   fields: [
     {
