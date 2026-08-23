@@ -15,9 +15,7 @@ export default (incomingConfig) => {
       else if (val && typeof val === 'object') walk(val)
     })
   }
-  // Deep clone to avoid mutating original before Payload processes it
-  const config = JSON.parse(JSON.stringify(incomingConfig))
-  if (config.collections) config.collections.forEach(walk)
-  if (config.globals) config.globals.forEach(walk)
-  return config
+  if (incomingConfig.collections) incomingConfig.collections.forEach(walk)
+  if (incomingConfig.globals) incomingConfig.globals.forEach(walk)
+  return incomingConfig
 }
