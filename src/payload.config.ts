@@ -417,7 +417,7 @@ export default buildConfig({
     disablePlaygroundInProduction: false,
   },
   plugins: [
-    shortenDbNames(),
+    shortenDbNames,
     opsCounterPlugin({
       max: 200,
       warnAt: 25,
