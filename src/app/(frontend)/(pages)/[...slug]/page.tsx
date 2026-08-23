@@ -65,8 +65,8 @@ export async function generateMetadata({
 
   let ogImage: Media | null = null
 
-  if (page && page.meta?.image && typeof page.meta.image !== 'string') {
-    ogImage = page.meta.image
+  if (page && page.meta?.image && typeof page.meta.image !== 'string' && typeof page.meta.image !== 'number') {
+    ogImage = page.meta.image as Media
   }
 
   // check if noIndex is true
