@@ -58,10 +58,15 @@ export async function generateMetadata({
   const page = await getCaseStudy(slug, draft)
 
   const ogImage =
-    typeof page?.meta?.image === 'object' &&
-    page?.meta?.image !== null &&
-    'url' in page?.meta?.image &&
-    `${process.env.NEXT_PUBLIC_CMS_URL}${page.meta.image.url}`
+    page?.meta?.image &&
+    typeof page.meta.image !== 'string' &&
+    typeof page.meta.image !== 'number' &&
+    typeof page.meta.image === 'object' &&
+    page.meta.image !== null &&
+    'url' in page.meta.image &&
+    typeof (page.meta.image as any).url === 'string'
+      ? `${process.env.NEXT_PUBLIC_CMS_URL}${(page.meta.image as any).url}`
+      : undefined
 
   return {
     description: page?.meta?.description,

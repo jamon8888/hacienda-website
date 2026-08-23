@@ -79,15 +79,27 @@ export async function generateMetadata({
   let ogImage: null | string = null
 
   if (post) {
-    if (post?.meta?.image && typeof post.meta.image !== 'string' && post.meta.image?.url) {
-      ogImage = post.meta.image.url
+    if (
+      post?.meta?.image &&
+      typeof post.meta.image !== 'string' &&
+      typeof post.meta.image !== 'number' &&
+      typeof post.meta.image === 'object' &&
+      post.meta.image &&
+      'url' in post.meta.image &&
+      typeof (post.meta.image as any).url === 'string'
+    ) {
+      ogImage = (post.meta.image as any).url
     } else if (
       post.featuredMedia === 'upload' &&
       post.image &&
       typeof post.image !== 'string' &&
-      post.image?.url
+      typeof post.image !== 'number' &&
+      typeof post.image === 'object' &&
+      post.image &&
+      'url' in post.image &&
+      typeof (post.image as any).url === 'string'
     ) {
-      ogImage = post.image.url
+      ogImage = (post.image as any).url
     } else if (post.featuredMedia === 'videoUrl' && post.videoUrl) {
       ogImage = `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?type=${category}&title=${post.title}`
     }
