@@ -66,7 +66,7 @@ export const CaseStudy: React.FC<CaseStudyT> = (props) => {
                       <p className={[classes.metaValue].filter(Boolean).join(' ')}>{useCase}</p>
                     </div>
                   )}
-                  {partner && typeof partner !== 'string' && (
+                  {partner && typeof partner !== 'string' && typeof partner !== 'number' && (
                     <Link
                       className={[classes.metaItem].filter(Boolean).join(' ')}
                       href={'/partners/' + partner.slug}
