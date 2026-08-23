@@ -1,5 +1,5 @@
 import { revalidateRedirects } from '@hooks/revalidateRedirects'
-import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { postgresAdapter } from '@payloadcms/db-postgres'
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
 import { nestedDocsPlugin } from '@payloadcms/plugin-nested-docs'
@@ -102,11 +102,12 @@ const sendgridConfig = {
 }
 
 export default buildConfig({
+  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   admin: {
-    autoLogin: {
+    autoLogin: process.env.NODE_ENV !== 'production' ? {
       email: 'dev2@payloadcms.com',
       password: 'test',
-    },
+    } : undefined,
     components: {
       afterNavLinks: ['@root/components/AfterNavActions'],
       beforeDashboard: ['@root/components/BeforeDashboard'],
@@ -312,8 +313,10 @@ export default buildConfig({
     'https://payloadcms.com',
     'https://discord.com/api',
   ].filter(Boolean),
-  db: mongooseAdapter({
-    url: process.env.DATABASE_URI || '',
+  db: postgresAdapter({
+    pool: {
+      connectionString: process.env.DATABASE_URL || '',
+    },
   }),
   defaultDepth: 1,
   editor: lexicalEditor({
