@@ -22,7 +22,7 @@ import nodemailerSendgrid from 'nodemailer-sendgrid'
 import path from 'path'
 import { buildConfig, type TextField } from 'payload'
 import { fileURLToPath } from 'url'
-import { shortenDbNames } from './plugins/shortenDbNames'
+import shortenDbNames from './plugins/shortenDbNames'
 
 import { BlogContent } from './blocks/BlogContent'
 import { BlogMarkdown } from './blocks/BlogMarkdown'
@@ -417,7 +417,7 @@ export default buildConfig({
     disablePlaygroundInProduction: false,
   },
   plugins: [
-    ...shortenDbNames(),
+    shortenDbNames(),
     opsCounterPlugin({
       max: 200,
       warnAt: 25,
