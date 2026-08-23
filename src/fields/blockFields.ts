@@ -55,10 +55,31 @@ export const backgroundField: Field = {
   ],
 }
 
+const shortenName = (name: string) => name.replace(/[^a-z0-9]/gi, '').toLowerCase().slice(0,3)||'x'
+
+const assignDbNames = (fields: any[]): any[] => fields.map(f => {
+  if (!f || typeof f !== 'object') return f
+  const copy = {...f}
+  if (copy.name && !copy.dbName) {
+    copy.dbName = shortenName(copy.name)
+  }
+  if (Array.isArray(copy.fields)) {
+    copy.fields = assignDbNames(copy.fields)
+  }
+  if (Array.isArray(copy.rows)) {
+    copy.rows = assignDbNames(copy.rows)
+  }
+  if (copy.fields && typeof copy.fields === 'object') {
+    // handle nested
+  }
+  return copy
+})
+
 export const blockFields = ({ name, fields, overrides }: Args): Field =>
   deepMerge(
     {
       name,
+      dbName: shortenName(name),
       type: 'group',
       admin: {
         hideGutter: true,
@@ -90,7 +111,7 @@ export const blockFields = ({ name, fields, overrides }: Args): Field =>
           ],
           label: 'Settings',
         },
-        ...fields,
+        ...assignDbNames(fields),
       ],
       label: false,
     },
