@@ -15,6 +15,10 @@ export const Media = ({
 } & Omit<Props, 'ref'>) => {
   const { className, htmlElement = 'div', resource } = props
 
+  if (!resource || typeof resource === 'number' || typeof resource === 'string') {
+    return null
+  }
+
   const isVideo = typeof resource !== 'string' && resource?.mimeType?.includes('video')
   const Tag = (htmlElement as ElementType) || Fragment
 
